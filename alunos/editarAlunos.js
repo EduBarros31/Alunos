@@ -1,3 +1,6 @@
+const {alunos} = require ("./alunos")
+
+
 function editarAlunos(matricula, novoNome,novoEmail,novoTelefone){   
     try{
         // função para encontrar um aluno

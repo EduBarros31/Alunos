@@ -1,4 +1,6 @@
 
+const {alunos} = require ("./alunos")
+
 function excluirAlunos(matricula, nome, email, telefone){
     // funçaõ para encontrar aluno
     try {
@@ -13,7 +15,7 @@ function excluirAlunos(matricula, nome, email, telefone){
         console.log("Aluno deletado com sucesso")
     }  
     } catch (error){
-        console.error("Erro ao excluir alunos". error.message)
+        console.error("Erro ao excluir alunos", error.message)
     }
 }
 

@@ -2,21 +2,41 @@
 
 const {alunos} = require ("./alunos")
 
+var validator = require('validator');
+
 function criarAlunos(matricula, nome, email, telefone){
-    try{
-    const novoAluno = {
-        matricula, 
-        nome, 
-        email, 
-        telefone
-   
- }
-alunos.push(novoAluno);  
+   const novoAluno = (matricula, nome, email, telefone )
+  try {
+    if(!validator.isEmail(email)){
+        console.error("Este email não existe")
+    return
+  }
 
-} catch (error){
-    console.error("Erro ao cadastrar dados", error.message)
+    if ( validator.isEmpty(matricula)||
+        validator.isEmpty(nome)||
+        validator.isEmpty(telefone)
+)  
+{ 
+    
+    
+    console.error("Todos os campos deve serem preenchidos")
+    return
+    
 
+  }
+  alunos.push(novoAluno)
+  
+  } 
+  catch (error) {
+    console.error("O e-mail informado é invalido",error.message);
+  }
 }
-}
+
+
+
+
+
+
+
 
 module.exports = { criarAlunos };
