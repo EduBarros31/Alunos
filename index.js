@@ -14,7 +14,7 @@ function exibirMenu() {
     console.log(" 3 - Excluir Aluno")
     console.log("4 - Listar Aluno")
     console.log("5 - excluir Todos")
-    console.log("6 - sair do do Aluno")
+    console.log("6 -  sair do do Aluno")
     console.log("==================")
 }
 let opcao;
