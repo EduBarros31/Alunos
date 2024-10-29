@@ -2,8 +2,8 @@
 
 const {alunos} = require ("./alunos")
 
-var validator = require('validator');
-
+var validator = require('validator');                    //  validator serve validar por parametro e cada etapa. 
+                                                         //  apos cada validação, o suario segue para cada etapa
 function criarAlunos(matricula, nome, email, telefone){
    const novoAluno = (matricula, nome, email, telefone )
   try {

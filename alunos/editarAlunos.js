@@ -8,6 +8,8 @@ function editarAlunos(matricula, novoNome,novoEmail,novoTelefone){
            elementodoarray.matricula === matricula
 
         )
+
+        
         // verificar se aluno existe
        if(aluno){
         aluno.nome = novoNome

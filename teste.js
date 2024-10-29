@@ -1,9 +1,41 @@
-var validator = require('validator');
 
-let nome = ""
-let email  = "teste@gmail.com"
+const prompt = require("prompt-sync")();
 
-console.log(validator.isEmpty(nome));
-console.log(validator.isEmpty(email));
-console.log(validator.isDate(data,{format:"DD/MM/YYYY"}))
-console.log(validator.isLength)(descrição,{min:2, max:4})
+function exibirMenu(){
+    console.log("==================")
+    console.log("1 - Criar Aluno")
+    console.log("2 - editar Aluno")
+    console.log(" 3 - Excluir Aluno")
+    console.log("4 - Listar Aluno")
+    console.log("5 - Sair do Aluno")
+    console.log("==================")
+}
+
+let opcao;
+do {
+    exibirMenu()
+    opcao = parseInt(prompt("digite uma opcao"))
+   switch(opçao){
+
+    case 1 :
+    console.log("Criando aluno")
+    break;
+    case 2  : 
+    console.log("editar aluno...")
+    break;
+    case 3  : 
+    console.log("excluir Aluno..")
+    break;
+    case 4  :
+     console.log("listar aluno")
+    break;
+    case 5 :
+    console.log(" Sair do sistema")
+    default :
+    console.log("numero invalido")
+    break
+
+   }
+
+} while (numero !== "5");
+
